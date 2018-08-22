@@ -8498,7 +8498,7 @@ class TCPDF {
 							$filename = basename($pl['opt']['fs']);
 							if (isset($this->embeddedfiles[$filename]['f'])) {
 								$annots .= ' /FS '.$this->embeddedfiles[$filename]['f'].' 0 R';
-								$iconsapp = array('Graph', 'Paperclip', 'PushPin', 'Tag');
+								$iconsapp = array('Graph', 'Paperclip', 'PushPin', 'Tags');
 								if (isset($pl['opt']['name']) AND in_array($pl['opt']['name'], $iconsapp)) {
 									$annots .= ' /Name /'.$pl['opt']['name'];
 								} else {
@@ -23679,7 +23679,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 
 	/**
 	 * Return the tag name without the namespace
-	 * @param $name (string) Tag name
+	 * @param $name (string) Tags name
 	 * @protected
 	 */
 	protected function removeTagNamespace($name) {

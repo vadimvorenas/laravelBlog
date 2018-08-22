@@ -290,7 +290,7 @@ class Error extends Message
     }
 
     /**
-     * returns title prepared for HTML Title-Tag
+     * returns title prepared for HTML Title-Tags
      *
      * @return string   HTML escaped and truncated title
      */

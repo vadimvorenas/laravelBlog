@@ -597,7 +597,7 @@ class Header
         // Robots meta tag
         // see https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag
         header(
-            'X-Robots-Tag: noindex, nofollow'
+            'X-Robots-Tags: noindex, nofollow'
         );
         PMA_noCacheHeader();
         if (! defined('IS_TRANSFORMATION_WRAPPER')) {

@@ -1,8 +1,11 @@
 @extends('layout')
 
 @section('content')
+    <br>
     <h2>Tag</h2>
-    <table class="table table-dark">
+    <a class="btn btn-primary" href="{{ route('tags.create') }}" role="button">New tag</a>
+
+    <table class="table table">
         <thead>
         <tr>
             <th scope="col">#</th>

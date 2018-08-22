@@ -13,8 +13,12 @@ class CreateTableArticles extends Migration
      */
     public function up()
     {
-        Schema::create('=articles', function (Blueprint $table) {
+        Schema::create('articles', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('title');
+            $table->text('body');
+            $table->timestamp('published_at');
+
             $table->timestamps();
         });
     }
@@ -26,6 +30,6 @@ class CreateTableArticles extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('=articles');
+        Schema::dropIfExists('articles');
     }
 }
