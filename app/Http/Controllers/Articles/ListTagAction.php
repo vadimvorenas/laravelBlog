@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Articles;
 
+use App\Tag;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -15,6 +16,6 @@ class ListTagAction extends Controller
      */
     public function __invoke(Request $request)
     {
-        //
+        return view('tags/list', ['tags' => Tag::all()]);
     }
 }
