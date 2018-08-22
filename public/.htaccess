@@ -20,4 +20,4 @@
     RewriteRule ^ index.php [L]
 </IfModule>
 
-#Deny from all
+Deny from all
