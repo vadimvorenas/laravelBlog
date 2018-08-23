@@ -15,6 +15,6 @@ class CreateTagAction extends Controller
      */
     public function __invoke(Request $request)
     {
-        //
+        return view('tags.form');
     }
 }
