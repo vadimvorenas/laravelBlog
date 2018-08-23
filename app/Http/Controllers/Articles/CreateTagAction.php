@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Articles;
 
+use App\Tags;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -15,6 +16,8 @@ class CreateTagAction extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view('tags.form');
+        $tag = new Tags();
+
+        return view('tags.form', ['tags' => $tag]);
     }
 }

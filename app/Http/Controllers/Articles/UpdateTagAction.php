@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers\Articles;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\EditTagRequest;
+use App\Tags;
 use App\Http\Controllers\Controller;
 
 class UpdateTagAction extends Controller
@@ -13,8 +14,13 @@ class UpdateTagAction extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function __invoke(Request $request)
+    public function __invoke(EditTagRequest $request)
     {
-        //
+        $tag = new Tags();
+        $tag = $tag::find($request->tag);
+        $tag->name = $request->get('name');
+        $tag->save();
+
+        return redirect()->route('tags.list');
     }
 }

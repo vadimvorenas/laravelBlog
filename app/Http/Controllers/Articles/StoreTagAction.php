@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Articles;
 
 use App\Http\Requests\StoreTagRequest;
 use App\Http\Controllers\Controller;
+use App\Tags;
 
 class StoreTagAction extends Controller
 {
@@ -15,6 +16,10 @@ class StoreTagAction extends Controller
      */
     public function __invoke(StoreTagRequest $request)
     {
+        $tag = new Tags();
+        $tag->name = $request->get('name');
+        $tag->save();
 
+        return redirect()->route('tags.list');
     }
 }
